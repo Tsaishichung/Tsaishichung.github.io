@@ -17,16 +17,16 @@
 <meta property="og:site_name" content="Tsaishichung的博客">
 <meta property="og:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
 自己对数据库也是小白">
-<meta property="og:image" content="http://yoursite.com/../图片/1nf.jpg">
-<meta property="og:image" content="http://yoursite.com/../图片/冗余.jpg">
-<meta property="og:image" content="http://yoursite.com/../图片/3nf1.jpg">
+<meta property="og:image" content="http://yoursite.com/tsaishichung/source/图片/1nf.jpg">
+<meta property="og:image" content="http://yoursite.com/tsaishichung/source/图片/冗余.jpg">
+<meta property="og:image" content="http://yoursite.com/tsaishichung/source/图片/3nf1.jpg">
 <meta property="og:image" content="http://yoursite.com/../图片/3nf2.jpg">
-<meta property="og:updated_time" content="2016-06-08T17:40:20.872Z">
+<meta property="og:updated_time" content="2016-06-08T17:41:39.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
 自己对数据库也是小白">
-<meta name="twitter:image" content="http://yoursite.com/../图片/1nf.jpg">
+<meta name="twitter:image" content="http://yoursite.com/tsaishichung/source/图片/1nf.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Tsaishichung的博客" type="application/atom+xml">
   
@@ -276,9 +276,9 @@
 <p><strong>对于普通数据库设计来说，我们最多考虑到第三范式(1NF、2NF、3NF)就可以了。</strong><br>下面我们就分别说说这三个范式的含义吧！</p>
 <h3 id="1NF"><a href="#1NF" class="headerlink" title="1NF"></a>1NF</h3><p><strong>第一范式：1NF是对属性的原子性约束，要求属性具有原子性，不可再分解；</strong></p>
 <p>如下图：</p>
-<p><img src="../图片/1nf.jpg" alt="第一范式错误示例"></p>
+<p><img src="/tsaishichung/source/图片/1nf.jpg" alt="第一范式错误示例"></p>
 <p>可以看出地址属性可以在分为省、市、区等等。上图就不符合1NF的要求。1NF是所有 <strong>关系型数据库</strong> 的最基本要求，<br>但是仅仅符合1NF的设计，仍然会存在数据冗余过大，插入异常，删除异常，修改异常的问题。如下图：</p>
-<p><img src="../图片/冗余.jpg" alt="示例图片"></p>
+<p><img src="/tsaishichung/source/图片/冗余.jpg" alt="示例图片"></p>
 <ul>
 <li>每一名学生的学号、姓名、系名、系主任这些数据重复多次。每个系与对应的系主任的数据也重复多次—— <strong>数据冗余过大</strong></li>
 <li>假如学校新建了一个系，但是暂时还没有招收任何学生（比如3月份就新建了，但要等到8月份才招生），那么是无法将系名与<br>系主任的数据单独地添加到数据表中去的—— <strong> 插入异常 </strong></li>
@@ -289,7 +289,7 @@
 <h3 id="2NF"><a href="#2NF" class="headerlink" title="2NF"></a>2NF</h3><p><strong>第二范式：消除非主属性对主属性(码)的部分函数依赖</strong></p>
 </li>
 </ul>
-<p><img src="../图片/3nf1.jpg" alt="示例图片"></p>
+<p><img src="/tsaishichung/source/图片/3nf1.jpg" alt="示例图片"></p>
 <p>第二范式的出现就是为了解决上图中所涉及的问题！</p>
 <p>首先先介绍一下函数依赖、完全函数依赖、部分函数依赖、传递函数依赖的区别：</p>
 <ul>
