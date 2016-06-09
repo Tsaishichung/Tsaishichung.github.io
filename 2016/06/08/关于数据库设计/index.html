@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf2.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.jpg">
-<meta property="og:updated_time" content="2016-06-09T10:38:52.352Z">
+<meta property="og:updated_time" content="2016-06-09T10:40:44.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
@@ -310,7 +310,7 @@
 <h3 id="3NF"><a href="#3NF" class="headerlink" title="3NF"></a>3NF</h3><p>**第三范式：消除非主属性对于主属性的传递函数依赖</p>
 <p>先po图：</p>
 <p><img src="../../../../图片/1nf2.png" alt="满足1NF示例"></p>
-<p>图中的课程依赖于分数，课程部分依赖于学号。当在第二范式中消除了部分函数依赖关系之后，对于所剩下的分数字段就要通过第三范式，消除传递函数依赖。<br>解决办法就是将一张包含多个可以作为主属性的数据表拆分成多个数据表，通过外键关联。如果是多对多的关系可以在两张表添加外键建立一张中间表来表示<br>多对多的关系。当满足了第三范式之后，那么我们就可以得到一个由多张设计合理的数据表组成的数据库了。</p>
+<p>图中的课程依赖于分数，课程部分依赖于学号。当在第二范式中消除了部分函数依赖关系之后，对于所剩下的分数字段就要通过第三范式，消除传递函数依赖。<br>解决办法就是将一张包含多个可以作为主属性的数据表拆分成多个数据表，通过外键关联。如果是多对多的关系可以在两张表添加外键建立一张中间表来表示多对多的关系。当满足了第三范式之后，那么我们就可以得到一个由多张设计合理的数据表组成的数据库了。</p>
 <p>完整关系如下图：</p>
 <p><img src="../../../../图片/3nf.jpg" alt="示例图片"></p>
 <p>对于普通的数据库设计，满足前面三个范式就已经足够了！本来参考知乎文章(题主有po BCNF，有兴趣戳原文)，结合自己的理解。如有不够准确的地方，欢迎指正！<br>参考知乎  <a href="https://www.zhihu.com/question/24696366" target="_blank" rel="external">https://www.zhihu.com/question/24696366</a> </p>
