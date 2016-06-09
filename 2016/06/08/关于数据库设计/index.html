@@ -17,18 +17,18 @@
 <meta property="og:site_name" content="Tsaishichung的博客">
 <meta property="og:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
 自己对数据库也是小白">
-<meta property="og:image" content="http://yoursite.com/../../../../图片/1nf.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/1nf1.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf2.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf3.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf2.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.png">
-<meta property="og:updated_time" content="2016-06-09T10:26:26.026Z">
+<meta property="og:updated_time" content="2016-06-09T10:35:54.881Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
 自己对数据库也是小白">
-<meta name="twitter:image" content="http://yoursite.com/../../../../图片/1nf.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../图片/1nf1.png">
   
     <link rel="alternative" href="/atom.xml" title="Tsaishichung的博客" type="application/atom+xml">
   
@@ -278,7 +278,7 @@
 <p><strong>对于普通数据库设计来说，我们最多考虑到第三范式(1NF、2NF、3NF)就可以了。</strong><br>下面我们就分别说说这三个范式的含义吧！</p>
 <h3 id="1NF"><a href="#1NF" class="headerlink" title="1NF"></a>1NF</h3><p><strong>第一范式：1NF是对属性的原子性约束，要求属性具有原子性，不可再分解；</strong></p>
 <p>如下图：</p>
-<p><img src="../../../../图片/1nf.png" alt="第一范式错误示例"></p>
+<p><img src="../../../../图片/1nf1.png" alt="第一范式错误示例"></p>
 <p>(字段我这里用的是中文，直观一点)可以看出not_1NF属性可以在分为系、届、班级等等。上图就不符合1NF的要求。1NF是所有 <strong>关系型数据库</strong> 的最基本要求，<br>现在对数据表进行修改，使其满足1NF。如下图：</p>
 <p><img src="../../../../图片/1nf2.png" alt="满足1NF示例"></p>
 <p>但是仅仅符合1NF的设计，仍然会存在数据冗余过大，插入异常，删除异常，修改异常的问题。</p>
