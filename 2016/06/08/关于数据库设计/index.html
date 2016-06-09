@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/冗余.jpg">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf1.jpg">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf2.jpg">
-<meta property="og:updated_time" content="2016-06-09T03:23:10.117Z">
+<meta property="og:updated_time" content="2016-06-09T03:35:12.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
@@ -289,7 +289,6 @@
 <h3 id="2NF"><a href="#2NF" class="headerlink" title="2NF"></a>2NF</h3><p><strong>第二范式：消除非主属性对主属性(码)的部分函数依赖</strong></p>
 </li>
 </ul>
-<p><img src="../../../../图片/3nf1.jpg" alt="示例图片"></p>
 <p>第二范式的出现就是为了解决上图中所涉及的问题！</p>
 <p>首先先介绍一下函数依赖、完全函数依赖、部分函数依赖、传递函数依赖的区别：</p>
 <ul>
@@ -301,6 +300,8 @@
 </li>
 </ul>
 <p><strong>第二范式的规则是要求数据表里的所有数据都要和该数据表的主键有完全依赖关系</strong>；如果有哪些数据只和主键的一部份有关的话，它就不符合第二范式。<br>或者换句话说，在一张表里面所有的非主属性都要完全依赖于主关键字，譬如：已经学号111，那么我们就可以得出这个学号背后的信息，包括这个学生的<br>姓名、性别、联系方式等信息。如果出现一个非主属性，班级。我们可以知道，这个学号可以决定这个学生的姓名、年龄、性别。但是好像并不能决定班级<br>的存在吧。那就是说明，这个非主属性班级不是依赖主关键学号的，所以如果存在这种关系，那么就不满足第二范式的要求！</p>
+<p>满足第二范式：如下图</p>
+<p><img src="../../../../图片/3nf1.jpg" alt="示例图片"></p>
 <h3 id="3NF"><a href="#3NF" class="headerlink" title="3NF"></a>3NF</h3><p>**第三范式：消除非主属性对于主属性的传递函数依赖</p>
 <p>解决办法就是将一张包含多个可以作为主属性的数据表拆分成多个数据表，通过外键关联。如果是多对多的关系可以在两张表添加外键建立一张中间表来表示<br>多对多的关系。如下图：</p>
 <p><img src="../../../../图片/3nf2.jpg" alt="示例图片"></p>
