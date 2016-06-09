@@ -22,8 +22,8 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf3.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf2.png">
-<meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.png">
-<meta property="og:updated_time" content="2016-06-09T10:35:54.881Z">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.jpg">
+<meta property="og:updated_time" content="2016-06-09T10:38:52.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的深刻得益于我的老师的引导，直接发链接，我老师的博客地址: http://pangsir8983.github.io/，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
@@ -287,7 +287,7 @@
 <li>假如学校新建了一个系，但是暂时还没有招收任何学生（比如3月份就新建了，但要等到8月份才招生），那么是无法将系名与系主任的数据单独地添加到数据表中去的—— <strong> 插入异常 </strong></li>
 <li>假如将某个系中所有学生相关的记录都删除，那么所有系与年级班级的数据也就随之消失了（一个系所有学生都没有了，并不表示这个系就没有了）。——<strong>删除异常</strong></li>
 <li><p>假如张三转系到网络工程系，那么为了保证数据库中数据的一致性，需要修改三条记录中系与系主任的数据。—— <strong>修改异常</strong>。</p>
-<p><strong>码：关系中的某个属性或者某几个属性的组合，用于区分每个元组（可以把“元组”理解为一张表中的每条记录，也就是每一行）。</strong><br>如：主键是确保每条记录唯一的属性，就可以称为码！假如上图中，学号字段不唯一（每个系都存在相同的学号），需要‘学号+系’来确保每条记录的唯一，那么就可以称<br>‘学号+系’ 为这张表的码！如下图：</p>
+<p><strong>码：关系中的某个属性或者某几个属性的组合，用于区分每个元组（可以把“元组”理解为一张表中的每条记录，也就是每一行）。</strong><br>如：主键是确保每条记录唯一的属性，就可以称为码！假如上图中，学号字段不唯一（每个系都存在相同的学号），需要‘学号+系’来确保每条记录的唯一，那么就可以称‘学号+系’ 为这张表的码！如下图：</p>
 <p><img src="../../../../图片/1nf3.png" alt="满足1NF示例"></p>
 <p>正因为仅符合1NF的数据库设计存在着这样那样的问题，我们需要提高设计标准，去掉导致上述四种问题的因素，使其符合更高一级的范式（2NF），<br>这就是所谓的“规范化”。</p>
 <h3 id="2NF"><a href="#2NF" class="headerlink" title="2NF"></a>2NF</h3><p><strong>第二范式：消除非主属性对主属性(码)的部分函数依赖</strong></p>
@@ -312,7 +312,7 @@
 <p><img src="../../../../图片/1nf2.png" alt="满足1NF示例"></p>
 <p>图中的课程依赖于分数，课程部分依赖于学号。当在第二范式中消除了部分函数依赖关系之后，对于所剩下的分数字段就要通过第三范式，消除传递函数依赖。<br>解决办法就是将一张包含多个可以作为主属性的数据表拆分成多个数据表，通过外键关联。如果是多对多的关系可以在两张表添加外键建立一张中间表来表示<br>多对多的关系。当满足了第三范式之后，那么我们就可以得到一个由多张设计合理的数据表组成的数据库了。</p>
 <p>完整关系如下图：</p>
-<p><img src="../../../../图片/3nf.png" alt="示例图片"></p>
+<p><img src="../../../../图片/3nf.jpg" alt="示例图片"></p>
 <p>对于普通的数据库设计，满足前面三个范式就已经足够了！本来参考知乎文章(题主有po BCNF，有兴趣戳原文)，结合自己的理解。如有不够准确的地方，欢迎指正！<br>参考知乎  <a href="https://www.zhihu.com/question/24696366" target="_blank" rel="external">https://www.zhihu.com/question/24696366</a> </p>
 
       
