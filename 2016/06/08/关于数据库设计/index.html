@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.jpg">
-<meta property="og:updated_time" content="2016-06-09T10:58:31.581Z">
+<meta property="og:updated_time" content="2016-06-09T11:02:08.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！
@@ -281,7 +281,7 @@
 <h3 id="1NF"><a href="#1NF" class="headerlink" title="1NF"></a>1NF</h3><p><strong>第一范式：1NF是对属性的原子性约束，要求属性具有原子性，不可再分解；</strong></p>
 <p>如下图：</p>
 <p><img src="../../../../图片/1nf1.png" alt="第一范式错误示例"></p>
-<p>(字段我这里用的是中文，直观一点)可以看出not_1NF属性可以在分为系、届、班级等等。上图就不符合1NF的要求。1NF是所有 <strong>关系型数据库</strong> 的最基本要求。<br>现在对数据表进行修改，使其满足1NF。如下图：</p>
+<p>(字段我这里用的是中文，直观一点)可以看出not_1NF属性可以在分为系、届、班级等等。所以not_1NF属性就不符合1NF的要求。1NF是所有 <strong>关系型数据库</strong> 的最基本要求。<br>现在对数据表进行修改，使其满足1NF。如下图：</p>
 <p><img src="../../../../图片/1nf2.png" alt="满足1NF示例"></p>
 <p>但是仅仅符合1NF的设计，仍然会存在数据冗余过大，插入异常，删除异常，修改异常的问题。</p>
 <ul>
