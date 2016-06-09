@@ -9,25 +9,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>关于数据库设计 | Tsaishichung的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
-自己对数据库也是小">
+  <meta name="description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！
+范式是什么？
+你可以把它粗略">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于数据库设计">
 <meta property="og:url" content="http://yoursite.com/2016/06/08/关于数据库设计/index.html">
 <meta property="og:site_name" content="Tsaishichung的博客">
-<meta property="og:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
-自己对数据库也是小">
+<meta property="og:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！
+范式是什么？
+你可以把它粗略">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf1.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf2.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/1nf3.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.jpg">
-<meta property="og:updated_time" content="2016-06-09T10:56:16.593Z">
+<meta property="og:updated_time" content="2016-06-09T10:58:31.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
-<meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：
-自己对数据库也是小">
+<meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！
+范式是什么？
+你可以把它粗略">
 <meta name="twitter:image" content="http://yoursite.com/../../../../图片/1nf1.png">
   
     <link rel="alternative" href="/atom.xml" title="Tsaishichung的博客" type="application/atom+xml">
@@ -258,8 +261,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关于数据库设计的规范"><a href="#关于数据库设计的规范" class="headerlink" title="关于数据库设计的规范"></a><font color="orange">关于数据库设计的规范</font></h2><p>   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: <a href="http://pangsir8983.github.io/" target="_blank" rel="external">http://pangsir8983.github.io/</a>  ，我对于数据库的设计方面前面说到得益于我老师的引导，让我对数据库建表有了比较深刻的理解。但是如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求：</p>
-<p>自己对数据库也是小白程度，先从范式入手吧！</p>
+        <h2 id="关于数据库设计的规范"><a href="#关于数据库设计的规范" class="headerlink" title="关于数据库设计的规范"></a><font color="orange">关于数据库设计的规范</font></h2><p>   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: <a href="http://pangsir8983.github.io/" target="_blank" rel="external">http://pangsir8983.github.io/</a>  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！</p>
 <p>范式是什么？</p>
 <p><strong>你可以把它粗略地理解为一张数据表的表结构所符合的某种设计标准的级别。</strong></p>
 <ul>
