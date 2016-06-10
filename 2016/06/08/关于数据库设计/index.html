@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/2nf.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/3nf.jpg">
-<meta property="og:updated_time" content="2016-06-10T03:33:33.099Z">
+<meta property="og:updated_time" content="2016-06-10T03:36:26.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于数据库设计">
 <meta name="twitter:description" content="关于数据库设计的规范   鄙人对于数据库设计理解的加深得益于我老师的引导，直接发链接，胖先生的博客地址: http://pangsir8983.github.io/  ，虽然对于数据库的理解深刻了许多，但是在层次上仍处于小白阶段。如果说让自己组织语言来表达的话还是会有所欠缺，下面就通过多方面信息搜集结合自己的理解来说明一下数据库建表的一些简单要求，那就先从范式入手吧！
@@ -317,7 +317,8 @@
 <pre><code>- 第一范式是对属性原子性的要求。
 - 第二范式和第三范式个人感觉是一起用的。第二范式消除部分函数依赖，第三范式消除传递函数依赖，合起来总的说就是使得所有非主属
   性完全依赖于主属性。这是第二范式和第三范式的目的。
-- 至于关于关联表的关系。关联表其实存储的信息只有两张表的主键，加上自己的主键。关联表的码就是两张表的主键，确保属性的唯一性。
+- 至于关于关联表的关系。关联表其实存储的信息只有两张表的主键和自己的主键。关联表的码就是两张表的主键，确保属性的唯一性，使
+  得两张表对应的关系唯一，例如：一个学生对应一个班级只需要在中间表存学生ID和班级ID建立对应关系。
 </code></pre><p>完整关系如下图：</p>
 <p><img src="../../../../图片/3nf.jpg" alt="满足3NF示例图片"></p>
 <p>对于普通的数据库设计，满足前面三个范式就已经足够了！本来参考知乎文章(题主有po BCNF，有兴趣戳原文)，结合自己的理解。如有不够准确的地方，欢迎指正！<br>参考知乎  <a href="https://www.zhihu.com/question/24696366" target="_blank" rel="external">https://www.zhihu.com/question/24696366</a> </p>
