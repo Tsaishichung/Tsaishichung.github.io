@@ -23,6 +23,12 @@
 面向人群：驾校学员及潜在学员">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之角色分布.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之角色对应权限.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之MVC.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之友好提示1.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之单个表单.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之多个表单.jpg">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之请求非法.png">
+<meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之功能结构图.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之前台展示1.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之前台展示2.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之教练信息.png">
@@ -35,7 +41,7 @@
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之前台门户信息录入.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之模块管理.png">
 <meta property="og:image" content="http://yoursite.com/../../../../图片/项目介绍之密码管理.png">
-<meta property="og:updated_time" content="2016-06-29T09:10:15.035Z">
+<meta property="og:updated_time" content="2016-06-29T11:08:07.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RBAC项目介绍">
 <meta name="twitter:description" content="项目简介项目介绍
@@ -299,8 +305,22 @@
 <p><img src="../../../../图片/项目介绍之角色分布.png" alt="项目介绍之角色分布"></p>
 <p>角色对应权限：（菜单父节点ID，菜单名称，菜单路径，打开方式，菜单状态，菜单所属父节点）</p>
 <p><img src="../../../../图片/项目介绍之角色对应权限.png" alt="项目介绍之角色对应权限"></p>
+<p>项目是严谨的MVC设计模型，Model层通过Spring IoC的控制反转和Spring AoP的面向切面编程共同维护对象的生命，并通过Mybatis持久层框架实现与数据库的数据交互。Controller控制层由SpringMVC提供技术支持，SpringMVC作为数据交互的中间体只控制页面的跳转和数据接收，在视图层发出数据请求之后，访问model层，在得到数据集后回传给视图层View。View视图层由JSP提供信息展示，并结合JSTL和EL表达式，可以根据开发人员意志或需求进行数据分类显示。请求方式及增、删、改、查的周期以及技术支持如下图所示：</p>
+<p><img src="../../../../图片/项目介绍之MVC.png" alt="项目介绍之MVC"></p>
+<p>在实现数据的增、删、改、查之后就已经完成了项目功能的需求。之后就是利用Bootstrap、CSS、Jquery以及各种控件，如：时间控件等，对View层页面进行美化，以及简单的友好提示，以增加项目的可读性和健壮性。下面给出一些友好提示示例，具体如下图：</p>
+<p>示例1：</p>
+<p><img src="../../../../图片/项目介绍之友好提示1.png" alt="项目介绍之友好提示1"></p>
+<p>以及一些脚本操作，如下图的批量插入技能操作，可以根据操作人员的意志主观更改批量插入的数目。如下图：</p>
+<p>正常状态下，单条插入：</p>
+<p><img src="../../../../图片/项目介绍之单个表单.png" alt="项目介绍之单个表单"></p>
+<p>多个表单，通过JS脚本进行变更，可以增加，可以移除，表单数必须大于等于1：</p>
+<p><img src="../../../../图片/项目介绍之多个表单.jpg" alt="项目介绍之多个表单"></p>
+<p>项目采用了Spring提供的过滤器对一些非法请求进行过滤，在未登录的前提下，拦截所有URL方式的请求，如未登录的情况下请求登录页面以外的页面则会出现405错误，如下图所示：</p>
+<p><img src="../../../../图片/项目介绍之请求非法.png" alt="项目介绍之请求非法"></p>
 <p>综上所述，项目功能结构如下图所示：</p>
-<h2 id="项目实例展示"><a href="#项目实例展示" class="headerlink" title="项目实例展示"></a>项目实例展示</h2><h3 id="前台展示"><a href="#前台展示" class="headerlink" title="前台展示"></a>前台展示</h3><p>前台展示：</p>
+<p><img src="../../../../图片/项目介绍之功能结构图.png" alt="项目介绍之功能结构图"></p>
+<h2 id="项目实例展示"><a href="#项目实例展示" class="headerlink" title="项目实例展示"></a>项目实例展示</h2><h3 id="前台展示"><a href="#前台展示" class="headerlink" title="前台展示"></a>前台展示</h3><p>前台主要是实现前台门户信息展示以及与学员信息管理功能，门户信息由驾校内部人员操作，在后台通过Ueditor编辑器实现文章的新增，删除，修改。达到驾校想要传递出的公司文化以及一些商业需求</p>
+<p>前台展示：</p>
 <p><img src="../../../../图片/项目介绍之前台展示1.png" alt="项目介绍之前台展示1"></p>
 <p>前台展示：</p>
 <p><img src="../../../../图片/项目介绍之前台展示2.png" alt="项目介绍之前台展示2"></p>
